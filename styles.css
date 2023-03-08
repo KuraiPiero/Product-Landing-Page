@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#header {
+	width: 100vw;
+	display: flex;
+	background-color: #000;
+	color: #fff;
+}
+#nav-bar {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#header__img-section {
+	display: flex;
+}
+#header-img {
+	filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(76deg) brightness(96%) contrast(102%);
+	width: 35%;
+	margin: 1em auto;
+}
+.nav-link {
+	display: flex;
+	width: 15%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #fff;
+}
