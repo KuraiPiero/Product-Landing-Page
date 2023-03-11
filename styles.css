@@ -3,31 +3,85 @@
 	padding: 0;
 }
 #header {
-	width: 100vw;
 	display: flex;
-	background-color: #000;
-	color: #fff;
+}
+#video-container {
+	display: flex;
+	position: absolute;
+	overflow: hidden;
+	width: 177.77777778vh;
+	min-width: 100%;
+	min-height: 450px;
+	user-select: none;
+	pointer-events: none;
+}
+#video {
+	flex: 1 1 200px;
+	top: -450px;
+	left: 0em;
+	position: absolute;
+	margin: 0 auto;
+	width: 300%;
+	height: 1000px;
+	margin-left: -100%;
+	background-size: cover;
+	background: no-repeat center;
+	z-index: -2;
+	overflow-clip-margin: 20px;
+	filter: blur(0.4px);
+}
+.grainyoverlay {
+	flex: 1 1 200px;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	mix-blend-mode: multiply;
+	background: linear-gradient(to right, rgb(113, 79, 0), transparent), url(https://grainy-gradients.vercel.app/noise.svg);
+	filter: contrast(170%) brightness(1000%) blur(2px);
+}
+.overlay {
+	flex: 1 1 200px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.3;
+	z-index: -1;
+	filter: sepia(50%);
+	mix-blend-mode: multiply;
 }
 #nav-bar {
+	position: fixed;
+	top: 0px;
+	display: flex;
 	width: 100%;
-	display: flex;
+	height: 100%;
 	justify-content: space-around;
-	align-items: center;
-}
-#header__img-section {
-	display: flex;
-}
-#header-img {
-	filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(76deg) brightness(96%) contrast(102%);
-	width: 35%;
-	margin: 1em auto;
+	gap: 2em;
+	flex-flow: nowrap row;
 }
 .nav-link {
+	position: relative;
+	flex: 1 1 200px;
 	display: flex;
-	width: 15%;
-	height: 100%;
-	align-items: center;
-	justify-content: center;
+	color: white;
 	text-decoration: none;
-	color: #fff;
+	font-weight: 700;
+	font-size: 2em;
+	top: 3em;
+	width: 100%;
+	justify-content: center;
+}
+#header-img {
+	filter: invert(100%) sepia(90%) saturate(526%) hue-rotate(253deg) brightness(113%) contrast(101%);
+}
+#starred {
+	background: white;
 }
